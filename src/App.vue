@@ -15,11 +15,6 @@ export default {
 components:{
   HeaderInicial
 },
-  data(){
-    return{
-
-    }
-  },
   beforeCreate(){
     this.$store.dispatch('DataInit');
   },

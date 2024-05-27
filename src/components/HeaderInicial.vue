@@ -8,6 +8,7 @@
           v-if="usuarioID!= null"
           v-model="model"
           align-tabs="center"
+          show-arrows
         >
           <v-tab @click="this.$router.push('/carceles')">Carceles</v-tab>
           <v-tab @click="this.$router.push('/presos')">Presos</v-tab>
@@ -15,13 +16,12 @@
           <v-tab @click="this.$router.push('/modulos')">Modulos</v-tab>
           <v-tab @click="this.$router.push('/sanciones')">Sanciones</v-tab>
           <v-tab @click="this.$router.push('/registroTiendas')">Registros de tienda</v-tab>
-
     </v-tabs>
-   
-      
+   <section id="class-head">
+      <a v-if="usuarioID!= null" id="descarga" href="../files" download="Postman-win64-Setup.exe"><v-btn>Descargar App</v-btn></a>
         <a style="cursor: pointer;" @click="this.$router.push('/login')">
-          <img id="ico-m" srcset="../assets/img-usuario.png" /></a>
-       
+          <img srcset="../assets/img-usuario.png" /></a>
+       </section>
       
   </header>
 </template>
@@ -49,15 +49,24 @@ header {
   height: 70px;
 }
 
-#ico-m {
-  height: 30px;
-  margin-left: 50px;
+#class-head{
+  display: flex;
+    align-items: center;
+}
+
+#class-head img{
+  width: 40px;
+    margin-top: 7px;
 }
 
 #ico {
   margin-left: 50px;
   height: 30px;
   margin-right: 20px;
+}
+
+v-tabs{
+
 }
 
 #logo {
@@ -105,4 +114,10 @@ header {
 #opciones-header a:hover {
   font-weight: bold;
 }
+
+#descarga{
+  text-decoration: none;
+  color: black;
+}
+
 </style>

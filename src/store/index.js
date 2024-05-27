@@ -62,13 +62,13 @@ export default createStore({
     }
   },
   actions: {
-    async DataInit({ dispatch }){
-      await dispatch('fetchCarceles')
-      await dispatch('fetchPresos')
-      await dispatch('fetchModulos')
-      await dispatch('fetchGuardias')
-      await dispatch('fetchSanciones')
-      await dispatch('fetchRegistroTiendas')
+     DataInit({ dispatch }){
+       dispatch('fetchCarceles')
+       dispatch('fetchPresos')
+       dispatch('fetchModulos')
+       dispatch('fetchGuardias')
+       dispatch('fetchSanciones')
+       dispatch('fetchRegistroTiendas')
     },
     async fetchCarceles({ commit }) {
       const response = await fetch(`${api}/carcel`);
@@ -101,7 +101,7 @@ export default createStore({
       commit('setModulo', data);
     },
     async fetchGuardias({ commit }) {
-      const response = await fetch(`${api}/guardia`);
+      const response = await fetch(`${api}/Guardia`);
       const data = await response.json();
       commit('setGuardias', data);
     },
@@ -131,9 +131,7 @@ export default createStore({
       commit('setRegistroTienda', data);
     },
     async loginC({ commit }, {user, pass}){
-      console.log("hia")
-      console.log(user)
-      console.log(pass)
+
       const response = await fetch(`${api}/Login/login?user=${user}&pwd=${pass}`);
       if(response.status==200){
         let data = await response.json()
