@@ -1,7 +1,7 @@
 <template>
   <header id="cabecera">
     <div>
-      <a style="cursor: pointer;" @click="this.$router.push('/')"><img id="logo" srcset="../assets/img-logo.png" /></a>
+      <a style="cursor: pointer;" @click="this.$router.push('/')"><img id="logo" srcset="../assets/logoPrincipal.png" /></a>
     </div>
 
     <v-tabs 
@@ -20,7 +20,7 @@
    <section id="class-head">
       <a v-if="usuarioID!= null" id="descarga" href="../files" download="Postman-win64-Setup.exe"><v-btn>Descargar App</v-btn></a>
         <a style="cursor: pointer;" @click="this.$router.push('/login')">
-          <img srcset="../assets/img-usuario.png" /></a>
+          <img srcset="../assets/img-usuario.png" class="icono-log"/></a>
        </section>
       
   </header>
@@ -45,7 +45,8 @@ header {
   margin: 0;
   top: 0;
   position: absolute ;
-  background-color: rgba(248, 248, 248, 0.249);
+  background-color: rgb(233, 201, 139);
+  box-shadow: 0px 2px 0px 0px #444444;
   height: 70px;
 }
 
@@ -71,9 +72,11 @@ v-tabs{
 
 #logo {
   margin-left: 50px;
-  height: 45px;
+  height: 65px;
   margin-top: 20px;
   margin-bottom: 10px;
+  filter: invert(100%);
+  
 }
 
 #search {
@@ -118,6 +121,15 @@ v-tabs{
 #descarga{
   text-decoration: none;
   color: black;
+  margin-right: 1rem
+}
+
+.icono-log {
+  margin-right: 2rem;
+  width: 100%;
+  height: 100%;
+ 
+  
 }
 
 </style>

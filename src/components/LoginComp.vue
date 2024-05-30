@@ -1,9 +1,9 @@
 <template>
   <v-container
     class="fill-height d-flex align-center justify-center"
-    style="margin-top: -6%; max-width: 720px"
+    style="margin-top: -8%; max-width: 720px"
   >
-    <v-row align="center" justify="center" style="height: 50vh">
+    <v-row align="center" justify="center" style="height: 50vh" >
       <v-col cols="12" sm="10">
         <v-card class="elevation-6 mt-10">
           <v-window v-model="step">
@@ -15,6 +15,7 @@
                       Entra en tu cuenta
                     </h4>
                     <h6
+
                       class="text-center grey--text"
                       style="font-size: 12px; margin-top: 4%"
                     >
@@ -52,7 +53,8 @@
                             />
                           </v-col>
                         </v-row>
-                        <v-btn
+                        <v-btn style="margin-bottom: 10%;"
+                        
                           dark
                           block
                           tile
@@ -96,7 +98,7 @@ export default {
     async login() {
       let mess = await this.loginC({
           user: this.usuario.nombre_usuario,
-          pass: "9b5f84e894e4a1f37b46fa8b2dcad694adf681b7a6d6a45e8b069e424a27d",
+          pass: "e1782b212d6a6784efcc808cc1cf30ca7c04edd302da66a96b77b1fa1ba92c",
         });
       if (!isNaN(parseFloat(mess)) && isFinite(mess)) {
           this.$router.push("/");
