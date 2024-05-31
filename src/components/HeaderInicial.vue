@@ -18,7 +18,7 @@
           <v-tab @click="this.$router.push('/registroTiendas')">Registros de tienda</v-tab>
     </v-tabs>
    <section id="class-head">
-      <a v-if="usuarioID!= null" id="descarga" href="../files" download="Postman-win64-Setup.exe"><v-btn>Descargar App</v-btn></a>
+      <a v-if="usuarioID!= null" id="descarga" href="../files" download="CECOTech.exe"><v-btn>Descargar App</v-btn></a>
         <a style="cursor: pointer;" @click="this.$router.push('/login')">
           <img srcset="../assets/img-usuario.png" class="icono-log"/></a>
        </section>

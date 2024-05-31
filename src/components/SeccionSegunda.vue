@@ -1,18 +1,19 @@
 <template>
     <section id="seccion2">
         <div class="div">
-            <img srcset="../assets/servicio-cliente.jpg">
-            <p>Estamos a tu disposicion para proporcionarte asesoramiento gratuito. <br>
-                Puedes contactar con nosotros a través de nuestra direccion de correo <b>pepepe@gmail.com</b>
+            <img srcset="../assets/ord.png">
+            <p>
+                CECOTech es una solución integral diseñada para transformar la administración penitenciaria, mejorando la eficiencia y seguridad de los datos.
+                
             </p>
 
         </div>
 
         <div class="div">
-            <p> Solo tendrás que encargarte de disfrutar de la conducción<br>
-                Con nuestra <b>garantía de 5 años</b> no tendrás de que preocuparte.
+            <p>Con características innovadoras y tecnología de punta, CECOTech es la herramienta que necesitas para llevar la gestión de tu centro penitenciario al siguiente nivel.
+No esperes más para modernizar la gestión de tu centro penitenciario. ¡Contáctanos hoy mismo y descubre cómo CECOTech puede hacer la diferencia!
             </p>
-            <img srcset="../assets/img-garantia.jpg">
+            <img srcset="../assets/vr.png">
         </div>
     </section>
 </template>
@@ -37,5 +38,6 @@
 .div p{
     align-self: center;
     font-size: 120%;
+     max-width: 60rem;
 }
 </style>

@@ -1,4 +1,6 @@
 <template>
+ <h2>{{this.param.toUpperCase()}}</h2>
+ <v-btn @click="this.$store.dispatch('DataInit');" class="boton">Refrescar</v-btn>
  <v-data-table v-if="param == 'carceles'" :items="this.carceles"></v-data-table>
  <v-data-table v-if="param == 'presos'" :items="this.presos"></v-data-table>
  <v-data-table v-if="param == 'guardias'" :items="this.guardias"></v-data-table>
@@ -35,8 +37,19 @@ export default {
 .v-data-table{
     width: 80%;
     margin: 0 10%;
-    margin-top: 100px;
 }
 
+h2{
+   margin-top: 100px;
+    text-align: -webkit-center;
+    margin-bottom: 20px;
+}
+
+.boton{
+    float: right;
+    margin-right: 10%;
+    margin-bottom: 30px;
+    background-color: orange;
+}
 
 </style>

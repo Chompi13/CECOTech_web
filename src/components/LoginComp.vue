@@ -78,6 +78,8 @@
 
 <script>
 import { mapActions } from 'vuex';
+import CryptoJS from 'crypto-js';
+
 
 export default {
   data: () => ({
@@ -96,9 +98,14 @@ export default {
     },
     //Esta funcion es asincrona por lo cual en este caso espera hasta recibir respuesta del metodo iniciarSesionUsuario
     async login() {
+    
+    const hash = CryptoJS.SHA256(this.usuario.contrasenia_usuario).toString(CryptoJS.enc.Hex);
+
+    console.log(hash)
+
       let mess = await this.loginC({
           user: this.usuario.nombre_usuario,
-          pass: "e1782b212d6a6784efcc808cc1cf30ca7c04edd302da66a96b77b1fa1ba92c",
+          pass: hash,
         });
       if (!isNaN(parseFloat(mess)) && isFinite(mess)) {
           this.$router.push("/");
