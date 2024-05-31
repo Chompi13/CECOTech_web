@@ -101,7 +101,6 @@ export default {
     
     const hash = CryptoJS.SHA256(this.usuario.contrasenia_usuario).toString(CryptoJS.enc.Hex);
 
-    console.log(hash)
 
       let mess = await this.loginC({
           user: this.usuario.nombre_usuario,
